@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "name":"GRADED QUESTION ON AUDITING",
+        "price": 539,
+        "image": "Products/11.jpg"
+    },
+    {
+        "id": 2,
+        "name":" AUDITING NOTES FOR SOUTH AFRICAN STUDENTS",
+        "price": 814,
+        "image": "Products/1.jpg"
+    },
+    {
+        "id": 3,
+        "name":" COMMERCIAL LAW 6TH EDITION",
+        "price": 1280,
+        "image": "Products/book3.webp"
+    },
+    {
+        "id": 4,
+        "name":" ETHIC FOR ACCOUNTING PROFFESSIONALS - A CASE STUDY",
+        "price": 508.28,
+        "image": "Products/book4.jpg"
+    },
+    {
+        "id": 5,
+        "name":" ACCOUNTING AN INTRODUCTION 14TH EDITION",
+        "price": 1149,
+        "image": "Products/book5.jpg"
+    },
+    {
+        "id": 6,
+        "name":" AUDITING NOTES FOR SOUTH AFRICAN STUDENTS",
+        "price": 814,
+        "image": "Products/1.jpg"
+    },
+    {
+        "id": 7,
+        "name":" SILKE: SOUTH AFRICAN INCOME TAX 2023",
+        "price": 1139,
+        "image": "Products/book26.jpg"
+    },
+    {
+        "id": 8,
+        "name":" SAICA STUDENT HANDBOOK (2022/2023)",
+        "price": 1185,
+        "image": "Products/book27.jpg"
+    },
+    {
+        "id": 9,
+        "name":" THE ANNOTATED IFRS STANDARDS - STANDARDS ISSUED 1 JANUARY 2018",
+        "price": 1184,
+        "image": "Products/book28.jpg"
+    },
+    {
+        "id": 10,
+        "name":" INTRODUCTION TO IFRS NINTH EDITION",
+        "price": 1000,
+        "image": "Products/book29.jpg"
+    },
+    {
+        "id": 11,
+        "name":" AUDITING FUNDAMENTALS IN A SOUTH AFRICAN CONTEXT",
+        "price": 601,
+        "image": "Products/book291.jpg"
+    },
+    {
+        "id": 12,
+        "name":" NEW ENTREPRENEURIAL LAW Piet Delport",
+        "price": 950,
+        "image": "Products/book2992.jpg"
+    },
+    {
+        "id": 13,
+        "name":" SILKE: SOUTH AFRICAN INCOME TAX 2023",
+        "price": 1139,
+        "image": "Products/book31.jpg"
+    },
+    {
+        "id": 14,
+        "name":" SAICA STUDENT HANDBOOK (2022/23)",
+        "price": 1185,
+        "image": "Products/book322.jpg"
+    },
+    {
+        "id": 15,
+        "name":" THE ANNOTATED IFRS STANDARDS - STANDARDS ISSUED 1 JANUARY 2018",
+        "price": 1184,
+        "image": "Products/book33.jpg"
+    },
+    {
+        "id": 16,
+        "name":" AUDITING NOTES FOR SOUTH AFRICAN STUDENTS",
+        "price": 815,
+        "image": "Products/1.jpg"
+    },
+    {
+        "id": 17,
+        "name":" FINANCIAL MANAGEMENT NINTH EDITION",
+        "price": 899,
+        "image": "Products/book35.jfif"
+    },
+    {
+        "id": 18,
+        "name":" SILKE: SOUTH AFRICAN INCOME TAX",
+        "price": 1139,
+        "image": "Products/book41.jpg"
+    },
+    {
+        "id": 19,
+        "name":" ADVANCED CASE STUDIES IN EXTERNAL AUDITIN AND CORPORATE GOVERNANCE 18TH EDITION",
+        "price": 399,
+        "image": "Products/book43.jpg"
+    },
+    {
+        "id": 20,
+        "name":" GAAP HANDBOOK FINANCIAL ACCOUNTING AND REPORTING PRACTICE",
+        "price": 1403,
+        "image": "Products/book27.jpg"
+    }
+]
+

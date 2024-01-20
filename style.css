@@ -1,0 +1,288 @@
+@import url(https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900$display=swao);
+
+body{
+    margin: 0;
+    font-family: Poppins;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+    top: 170px;
+    position: sticky;
+}
+svg{
+    width: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.icon-cart{
+    position: relative;
+}
+.icon-cart span{
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: -40%;
+    right: -20px;
+}
+
+.wish-cart {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.icon-wish{
+    position: relative;
+    font-size: 40px;
+}
+.icon-wish span{
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: -30%;
+    right: -20px;
+}
+
+.title{
+    font-size: xx-large;
+}
+
+.listProduct .item img{
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.listProduct .item{
+    background-color: #EEEEE6;
+    padding: 20px;
+    border-radius: 20px;
+    padding: 5px;
+}
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+.listProduct .item button{
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+/* cart */
+.cartTab{
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eee;
+    position: fixed;
+    top: 166px;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+    padding: 5px;
+}
+body.showCart .cartTab{
+    right: 0;
+}
+body.showCart .container{
+    transform: translateX(-250px);
+}
+.cartTab h1{
+    padding: 8px;
+    margin: 0;
+    font-weight: 300;
+    color: #ccc;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button{
+    background-color: rgba(255, 255, 0, 0.5);
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+    color: #eee;
+}
+.cartTab .close{
+    background-color: rgba(0, 128, 0, 0.5);
+    color: #eee;
+}
+.listCart .item img{
+    width: 100%;
+}
+.listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+.body-lineUp {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 10px;
+}
+@media only screen and (max-width: 992px) {
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+/* cart */
+.wishTab{
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eee;
+    position: fixed;
+    top: 166px;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+    padding: 5px;
+}
+body.showCart .wishTab{
+    right: 0;
+}
+body.showCart .container{
+    transform: translateX(-250px);
+}
+.wishTab h1{
+    padding: 8px;
+    margin: 0;
+    font-weight: 300;
+    color: #ccc;
+}
+.wishTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.wishTab button{
+    background-color: rgba(255, 255, 0, 0.5);
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+    color: #eee;
+}
+.wishTab .close{
+    background-color: rgba(0, 128, 0, 0.5);
+    color: #eee;
+}
+.wishTab .item img{
+    width: 100%;
+}
+.listWish .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listWish .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listWish .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listWish .item:nth-child(even){
+    background-color: #eee1;
+}
+.listWish{
+    overflow: auto;
+}
+.listWish::-webkit-scrollbar{
+    width: 0;
+}
+
+.body-lineUp {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 10px;
+}
+@media only screen and (max-width: 992px) {
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

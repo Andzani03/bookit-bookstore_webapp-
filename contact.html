@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <meta>
+        <meta>
+        <title>bookit Message | ANDZANI THOMAS MBHIZA</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/d388045308.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="nav.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <!-- <link rel='stylesheet' href='https://cdn.materialdesignicons.com/3.3.92/css/materialdesignicons.min.css'/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"></script>
+
+        <script src="https://kit.fontawesome.com/d388045308.js" crossorigin="anonymous"></script>
+
+        <!-- Add additional services that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js"></script>
+    </head>
+    <body>
+        <section id="header">
+            
+            <a href="#"><img src="images/bookit_icon.jpg" class="logo" alt=""></a>
+                    <li class="searchbar" onkeyup="search_book()">
+                        <input type="text" placeholder="search....">
+                        <a href="#" onclick="search_book()"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+    
+            <div> 
+            <link rel="stylesheet" href="css/style.css">
+                <ul id="navbar">   
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                    <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                    
+                
+                <ul class="nav navbar-nav navbar-right">
+        
+                    <li class="dropdown">
+                        <a href='#' id='user_info' class='dropdown-toggle' data-toggle="dropdown" >Hello, Sign in <span class="caret"></a>
+                        <ul class="dropdown-menu ">
+        
+                            <li id='settings'><a href="#" style='text-align:center'>Settings<i class="fa-solid fa-gear"></i></a></li>
+                            <li id='logout'><a href="#" style='text-align:center'>Logout <i class="fa-solid fa-right-from-bracket"></i><span class='glyphicon glyphicon-log-out'></span></a></li>
+                            <li id='login'><a href='auth.html?auth=login' style='text-align:center'>Login <span class='glyphicon glyphicon-log-in'></span><i class="fa-solid fa-right-to-bracket"></i></a></li>
+                            <li id='signUp'><a href='auth.html?auth=signup' style='text-align:center'>Sign Up <i class="fa-solid fa-right-to-bracket"></i><span class='glyphicon glyphicon-user'></span></a></li>
+        
+                        </ul>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container">
+            <header>
+                <div class="title"> </div>
+                <div class="icon-cart">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                    </svg>
+                    <span>0</span>
+                </div>
+            </header>
+        </div>
+
+        <section id="page-header" style="background-image: url(images/about/banner.png);" class="about-header">
+            <h2>#Let's_talk</h2>
+            <p>LEAVE A MESSAGE, We love to hear from you!</p>
+        </section>
+
+        <section id="contact-deatails" class="section-p1">
+            <div class="details">
+                <span>GET IN TOUCH</span>
+                <h2>Visit one of our agency location or contact us today!</h2>
+                <h3>Head Office</h3>
+                <div>
+                    <li>
+                        <i class="fa-regular fa-map"></i>
+                    <p>1195 Prospect Street Corner of Prospect and Jan Shoba (old Duncan) street on the 1st floor of the DEKRA Building.</p>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p> info@bookitbooks.co.za</p>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <p>012 362 6420</p>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i></i>
+                        <p> Mon - Sun, 7am - 19:00pm</p>
+                    </li>
+                </div>
+                <div>
+                    <li>
+                        <i class="fa-regular fa-clock"></i>
+                        <p>072 123 0679</p>
+                    </li>
+                </div>
+            </div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.559684168294!2d28.237266075842662!3d-25.75207087735797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561ba16a9a395%3A0x87ae4b71f30157df!2sBookit%20Books!5e0!3m2!1sen!2sza!4v1693254996459!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section id="form-details">
+            <form action="" id="contactForm">
+                <span>LEAVE A MESSAGE</span>
+                <div class="alert">your message sent</div>
+                <h2>We love to hear from you</h2>
+                    <input type="text" id="name" placeholder="Your Name">
+                    <input type="text" id="email" placeholder="E-mail">
+                    <input type="text" id="subject" placeholder="Subject">
+                    <textarea name="" id="msgContent" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <button class="normal" type="submit">Submit</button>
+                
+            </form>
+
+            <div class="people">
+                <div>
+                    <img src="res/Employees/Thomas.JPG" alt="">
+                    <p><span>Andzani Thomas Mbhiza</span> Software and Web Develpoper <br> Phone: +27 072 657 9607 <br> Email: andzani.mbhiz@gmail.com</p>
+                </div>
+                <div>
+                    <img src="res/Employees/aviwe.jfif" alt="">
+                    <p><span>Aviwe Kave</span> Senior Project Manager <br> Phone: +27 68 467 5857 <br> Email: andzani.mbhiz@gmail.com</p>
+    
+                </div>
+                <div>
+                    <img src="res/Employees/Nkechi.jfif" alt="">
+                    <p><span>Nkechi Maganya</span> Deputy Prject Manager <br> Phone: +27 68 178 4426 <br> Email: andzani.mbhiz@gmail.com</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter"  class="section-p1 section-m1" style="background-image: url(images/about/banner.png);">
+            <div class="newstext">
+                <h4>Sign Up For Newsletter</h4>
+                <p>get E-mail updates about our latest shop and <span>special offer</span>.</p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="your email address">
+                <button class="normal">submit</button>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="images/bookit_icon.jpg" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong>1195 Prospect Street Corner of Prospect and Jan Shoba (old Duncan) street on the 1st floor of the DEKRA Building.</p>
+                <p><strong>Phone:</strong>(+27) 012 362 6420/ (+27) 72 123 0679</p>
+                <p><strong>Hours:</strong>07:00 - 19:00, Mon - Sat</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pintrest-t"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col">
+                <h4>About Us</h4>
+                <a href="delivery.html">Delivery Information</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+          
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="auth.html?auth=login">Sign In</a>
+                <a href="cart.html">View My Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="help">Help</a>
+            </div>
+          
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="images/pay/app.jpg" alt="">
+                    <img src="images/pay/play.jpg" alt="">
+                </div>
+                <p>Secure Payment Gateways</p>
+                <img src="images/pay/pay.png" alt="">
+            </div>
+          
+            <div class="copyright">
+                <p> © 2023, TM Tech etc & ltd - HTML Bookit bookstore</p>
+            </div>
+        </footer>
+        
+          <div class="cartTab">
+              <h1>Shopping Cart</h1>
+              <div class="listCart">
+              </div>
+              <div class="btn">
+                  <button class="close">CLOSE</button>
+                  <button class="checkOut"><a href="paymentGateway.html">Check Out</a></button>
+              </div>
+          </div>
+        
+        <script src="app.js"></script>
+
+        <script>
+            var contactFormDb = firebase.database().ref("contactForm");
+
+            document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+            function submitForm(e){
+                e.preventDefault();
+
+                var name = getElementVal("name");
+                var email = getElementVal("email");
+                var subject = getElementVal("subject");
+                var msgContent = getElementVal("msgContent");
+
+                console.log(name,email,subject,msgContent)
+                //saveMessages(name,email,subject,msgContent);
+
+            }
+            const getElementVal = (id) => {
+                return document.getElementById(id).value;
+            }
+        </script>
+    <script>
+        // Get the element by its ID
+        var userDropdown = document.getElementById('user_info');
+
+        // Function to toggle the dropdown menu
+        userDropdown.onclick = function() {
+            var dropdownMenu = userDropdown.nextElementSibling;
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownMenu.style.display = 'block';
+            } else {
+                dropdownMenu.style.display = 'none';
+            }
+        };
+    </script>
+
+<script src="app.js"></script>
+
+<script src='js/firebaseConfig.js'></script>
+<script src='js/database.js'></script>
+<script src='js/userInfo.js'></script>
+<script src='js/URLparams.js'></script>
+<script src='js/shopItems.js'></script>
+<script src="script/script.js"></script>
+<script src="script/search.js"></script>
+<script src="script/login.js"></script>
+    </body>
+</html>

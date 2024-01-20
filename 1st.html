@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST-YEAR</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section id="header">
+        
+        <a href="#"><img src="images/bookit_icon.jpg" class="logo" alt=""></a>
+                <li class="searchbar" onkeyup="search_book()">
+                    <input type="text" placeholder="search....">
+                    <a href="#" onclick="search_book()"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+
+        <div> 
+        <link rel="stylesheet" href="css/style.css">
+            <ul id="navbar">   
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+
+                <ul class="nav navbar-nav navbar-right">
+    
+                    <li class="dropdown">
+                      <a href='#' id='user_info' class='dropdown-toggle' data-toggle="dropdown" >Hello, Sign in <span class="caret"></a>
+                        <ul class="dropdown-menu ">
+          
+                          <li id='settings'><a href="#" style='text-align:center'>Settings<i class="fa-solid fa-gear"></i></a></li>
+                          <li id='logout'><a href="#" style='text-align:center'>Logout <i class="fa-solid fa-right-from-bracket"></i><span class='glyphicon glyphicon-log-out'></span></a></li>
+                          <li id='login'><a href='auth.html?auth=login' style='text-align:center'>Login <span class='glyphicon glyphicon-log-in'></span><i class="fa-solid fa-right-to-bracket"></i></a></li>
+                          <li id='signUp'><a href='auth.html?auth=signup' style='text-align:center'>Sign Up <i class="fa-solid fa-right-to-bracket"></i><span class='glyphicon glyphicon-user'></span></a></li>
+          
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+            
+            
+        </div>
+    </section>
+    <center>
+    <article>
+        <h2>Introduction to BCom</h2>
+        <p>
+            Welcome to your first year in the Bachelor of Commerce program! This blog post will guide you through the essential books you'll need for your academic journey.
+        </p>
+    </article>
+
+    <article>
+        <h2>Financial Accounting</h2>
+        <p>
+            <strong>Book Title:</strong> Financial Accounting Basics<br>
+            <strong>Author:</strong> John Smith<br>
+            <strong>Description:</strong> This book covers the fundamental concepts of financial accounting, providing a solid foundation for your studies.
+        </p>
+    </article>
+
+    <article>
+        <h2>Business Mathematics</h2>
+        <p>
+            <strong>Book Title:</strong> Business Mathematics Made Easy<br>
+            <strong>Author:</strong> Jane Doe<br>
+            <strong>Description:</strong> A comprehensive guide to business mathematics, helping you understand and apply mathematical concepts in a business context.
+        </p>
+    </article>
+
+    <article>
+        <h2>Principles of Management</h2>
+        <p>
+            <strong>Book Title:</strong> Management Principles and Practices<br>
+            <strong>Author:</strong> Michael Johnson<br>
+            <strong>Description:</strong> Dive into the principles of management with this book, covering planning, organizing, leading, and controlling in the business environment.
+        </p>
+    </article>
+</center>
+    <section id="newsletter"  class="section-p1 section-m1" style="background-image: url(images/about/banner.png);">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>get E-mail updates about our latest shop and <span>special offer</span>.</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/bookit_icon.jpg" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>1195 Prospect Street Corner of Prospect and Jan Shoba (old Duncan) street on the 1st floor of the DEKRA Building.</p>
+            <p><strong>Phone:</strong>(+27) 012 362 6420/ (+27) 72 123 0679</p>
+            <p><strong>Hours:</strong>07:00 - 19:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pintrest-t"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About Us</h4>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a onclick="viewCart()" href="cart.html">Sign In</a>
+            <a href="#">View My Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="images/pay/app.jpg" alt="">
+                <img src="images/pay/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gateways</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p> © 2023, TM Tech etc & ltd - HTML Bookit bookstore</p>
+        </div>
+    </footer>
+</body>
+</html>

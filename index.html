@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME | ANDZANI THOMAS MBHIZA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <!-- Latest compiled and minified CSS -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+    <script src="https://kit.fontawesome.com/d388045308.js" crossorigin="anonymous"></script>
+</head>
+<body class="">
+    <section id="header">
+        
+        <a href="#"><img src="images/bookit_icon.jpg" class="logo" alt=""></a>
+                <li class="searchbar" onkeyup="search_book()">
+                    <input type="text" placeholder="search....">
+                    <a href="#" onclick="search_book()"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+
+        <div> 
+        <link rel="stylesheet" href="css/style.css">
+            <ul id="navbar">   
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+
+                <ul class="nav navbar-nav navbar-right">
+    
+                    <li class="dropdown">
+                      <a href='#' id='user_info' class='dropdown-toggle' data-toggle="dropdown" >Hello, Sign in <span class="caret"></a>
+                        <ul class="dropdown-menu ">
+          
+                          <li id='settings'><a href="#" style='text-align:center'>Settings<i class="fa-solid fa-gear"></i></a></li>
+                          <li id='logout'><a href="#" style='text-align:center'>Logout <i class="fa-solid fa-right-from-bracket"></i><span class='glyphicon glyphicon-log-out'></span></a></li>
+                          <li id='login'><a href='auth.html?auth=login' style='text-align:center'>Login <span class='glyphicon glyphicon-log-in'></span><i class="fa-solid fa-right-to-bracket"></i></a></li>
+                          <li id='signUp'><a href='auth.html?auth=signup' style='text-align:center'>Sign Up <i class="fa-solid fa-right-to-bracket"></i><span class='glyphicon glyphicon-user'></span></a></li>
+          
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+            
+            
+        </div>
+    </section>
+
+    <div class="container">
+        <header>
+            <div class="title"> </div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+            <div></div>
+            <div class="icon-wish">
+                <i class="fa-solid fa-heart"></i>
+                <span>0</span>
+            </div>
+        </header>
+    </div>
+    
+    <section id="hero" style="background-image: url(images/background_ic.jpg);">
+        <h4>Trade-In-Offer</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>same more with coupons & up to 70% off!</p>
+        <button style="background-image: url(images/button.png);">shop now</button>
+    </section>
+
+    <section id="feature" class="section-p1 ">
+        <div class="fe-box">
+            <img src="images/features/f1.png">
+            <h6>Free Shipping</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/features/f2.png">
+            <h6>Online Order</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/features/f3.png">
+            <h6>Save Money</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/features/f4.png">
+            <h6>Promotions</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/features/f5.png">
+            <h6>Happy Sell</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/features/f6.png">
+            <h6>F24/7 Support</h6>
+        </div>
+    </section>
+    
+    <section class="body-lineUp">
+        <div class="listProduct">
+            <div class="item">
+                <img src="Products/1.jpg" alt="">
+                <h2>PRODUCT NAME</h2>
+                <div class="price">R358</div>
+                <button class="addCart">
+                    Add To Cart
+                </button>
+                <button class="addFav">
+                    Add To Favorite
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box" style="background-image: url(images/banner/banner1.jpg);">
+            <h2>Season Sales</h2>
+            <h3>programming collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2" style="background-image: url(images/banner/banner2.jpg);">
+            <h2>New Programming Sales</h2>
+            <h3>Recent % New</h3>
+        </div>
+        <div class="banner-box banner-box3" style="background-image: url(images/banner/b33.jpg);">
+            <h2>Other Books</h2>
+            <h3>New Trendy Prints</h3>
+        </div>
+    </section>
+
+
+    <section id="newsletter"  class="section-p1 section-m1" style="background-image: url(images/about/banner.png);">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>get E-mail updates about our latest shop and <span>special offer</span>.</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/bookit_icon.jpg" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>1195 Prospect Street Corner of Prospect and Jan Shoba (old Duncan) street on the 1st floor of the DEKRA Building.</p>
+            <p><strong>Phone:</strong>(+27) 012 362 6420/ (+27) 72 123 0679</p>
+            <p><strong>Hours:</strong>07:00 - 19:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pintrest-t"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About Us</h4>
+            <a href="delivery.html">Delivery Information</a>
+            <a href="Privacy">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a onclick="viewCart()" href="cart.html">Sign In</a>
+            <a href="#">View My Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="help.html">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="images/pay/app.jpg" alt="">
+                <img src="images/pay/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gateways</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p> © 2023, TM Tech etc & ltd - HTML Bookit bookstore</p>
+        </div>
+    </footer>
+        
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut"><a href="paymentGateway.html">Check Out</a></button>
+        </div>
+    </div>
+        
+    <div class="wishList">
+        <h3>Wish List</h3>
+        <div class="listWish"></div>
+        <div class="closeWish">&#10006;</div>
+    </div>
+        
+    <script src="app.js"></script>
+
+    <script>
+        // Get the element by its ID
+        var userDropdown = document.getElementById('user_info');
+
+        // Function to toggle the dropdown menu
+        userDropdown.onclick = function() {
+            var dropdownMenu = userDropdown.nextElementSibling;
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownMenu.style.display = 'block';
+            } else {
+                dropdownMenu.style.display = 'none';
+            }
+        };
+    </script>
+    
+    <script src="script/login.js"></script>
+</body>
+</html>

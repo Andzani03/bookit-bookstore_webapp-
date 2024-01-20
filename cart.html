@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel='stylesheet' href='https://cdn.materialdesignicons.com/3.3.92/css/materialdesignicons.min.css'/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+
+<link rel='stylesheet' href='css/style.css'/>
+</head>
+
+<body>
+  <section id="header">
+    <a href="#"><img src="images/bookit_icon.jpg" class="logo" alt=""></a>
+            <li class="searchbar" onkeyup="search_book()">
+                <input type="text" placeholder="search....">
+                <a href="#" onclick="search_book()"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+
+    <div> 
+        <ul id="navbar">   
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="dropdown">
+            <a href='#' id='user_info' class='dropdown-toggle' data-toggle="dropdown" >Hello, Sign in <span class="caret"></a>
+              <ul class="dropdown-menu ">
+
+                <li id='settings'><a href="#" style='text-align:center'>Settings</a></li>
+                <li id='logout'><a href="#" style='text-align:center'>Logout <span class='glyphicon glyphicon-log-out'></span></a></li>
+                <li id='login'><a href='auth.html?auth=login' style='text-align:center'>Login <span class='glyphicon glyphicon-log-in'></span></a></li>
+                <li id='signUp'><a href='auth.html?auth=signup' style='text-align:center'>Sign Up <span class='glyphicon glyphicon-user'></span></a></li>
+
+              </ul>
+            </li>
+            <li><a class="active"  class="active" href='cart.html'>Cart <span class='glyphicon glyphicon-shopping-cart'></span></a></li>
+        </ul>
+        
+    </div>
+</section>
+
+  <div class='container-fluid'>
+    <div class='container  checkout' id='checkout'>
+    </div>
+
+   <div  class="container padding-2" id='cart'>
+   </div>
+</div>
+
+<footer class="section-p1">
+  <div class="col">
+      <img class="logo" src="images/bookit_icon.jpg" alt="">
+      <h4>Contact</h4>
+      <p><strong>Address:</strong>1195 Prospect Street Corner of Prospect and Jan Shoba (old Duncan) street on the 1st floor of the DEKRA Building.</p>
+      <p><strong>Phone:</strong>(+27) 012 362 6420/ (+27) 72 123 0679</p>
+      <p><strong>Hours:</strong>07:00 - 19:00, Mon - Sat</p>
+      <div class="follow">
+          <h4>Follow Us</h4>
+          <div>
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-pintrest-t"></i>
+              <i class="fab fa-youtube"></i>
+          </div>
+      </div>
+  </div>
+
+  <div class="col">
+      <h4>About Us</h4>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+  </div>
+
+  <div class="col">
+      <h4>My Account</h4>
+      <a href='auth.html?auth=login'>Sign In</a>
+      <a href="cart.html">View My Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Help</a>
+  </div>
+
+  <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Store or Google Play</p>
+      <div class="row">
+          <img src="images/pay/app.jpg" alt="">
+          <img src="images/pay/play.jpg" alt="">
+      </div>
+      <p>Secure Payment Gateways</p>
+      <img src="images/pay/pay.png" alt="">
+  </div>
+
+  <div class="copyright">
+      <p> © 2023, TM Tech etc & ltd - HTML Bookit bookstore</p>
+  </div>
+</footer>
+
+  <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+  <script src='js/firebaseConfig.js'></script>
+  <script src='js/userInfo.js'></script>
+  <script src='js/cart.js'></script>
+  <script>
+  let checkout = document.getElementById('checkout');
+    let cart = document.getElementById('cart');
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+    firebase.database().ref('cart/' + user.uid).on('value', snap => {
+      if(document.getElementById('checkoutRow') != null){
+        document.getElementById('checkoutRow').parentNode.removeChild(document.getElementById('checkoutRow'));
+      }
+      buildProceedToCheckOut(snap, checkout);
+    });
+    //user logs in
+    firebase.database().ref('cart/' + user.uid).on('child_added', snap => {
+      buildCartProducts(snap, cart);
+    });
+
+      }else {
+        //user logs out
+        if(document.getElementById('checkoutRow') != null){
+          document.getElementById('checkoutRow').parentNode.removeChild(document.getElementById('checkoutRow'));
+        }
+
+        let items = document.getElementsByClassName('item');
+        if(items[items.length - 1]){
+          for(let i = 0; i < items.length; i++){
+            items[i].parentNode.removeChild(items[i]);
+          }
+        }
+        buildLoginBtn(cart, 'auth.html?auth=login');
+      }
+    });
+  </script>
+  </body>
+  </html>
